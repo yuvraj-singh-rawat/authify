@@ -54,6 +54,10 @@ const Login = () => {
     }
   };
 
+  const googleLogin = () => {
+    window.location.href = backendUrl + "/api/auth/google";
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen top-0 px-6 sm:px-0 bg-gradient-to-br from-blue-200 to-purple-400">
       <img
@@ -121,6 +125,15 @@ const Login = () => {
 
           <button className="w-full py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-900 text-white font-medium">
             {state}
+          </button>
+
+          <button
+            type="button"
+            onClick={googleLogin}
+            className="w-full mt-3 py-2.5 rounded-full bg-white text-gray-800 font-medium flex items-center justify-center gap-2"
+          >
+            <img src={assets.google_icon} className="w-5" />
+            Continue with Google
           </button>
         </form>
 

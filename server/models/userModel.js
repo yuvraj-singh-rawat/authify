@@ -10,10 +10,16 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    authProvider: {
+        type: String,
+        enum: ["local", "google"],
+        default: "local",
+    },
     password: {
         type: String,
-        required: true,
-        unique: true,
+        required: function () {
+            return this.authProvider === "local";
+        },
     },
     verifyOtp: {
         type: String,

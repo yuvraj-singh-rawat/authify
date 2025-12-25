@@ -25,8 +25,9 @@ const Header = () => {
       </h2>
 
       <p className="mb-8 max-w-md">
-        Secure, scalable authentication with email verification, role-based
-        access and OAuth — built for modern web apps.
+        Secure and scalable authentication with JWT, bcrypt password hashing,
+        email verification, and Google OAuth — built for modern web
+        applications.
       </p>
 
       <button
