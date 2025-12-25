@@ -14,7 +14,7 @@ import "./config/passport.js"
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 5000;
 connectDB();
 
 app.use(express.json());
@@ -36,6 +36,8 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
-app.listen(port, () => {
-    console.log(`Server started on ${port}`)
-})
+// app.listen(port, () => {
+//     console.log(`Server started on ${port}`)
+// })
+
+export default app;
